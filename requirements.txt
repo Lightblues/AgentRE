@@ -1,0 +1,19 @@
+easonsi
+sortedcontainers
+jupyter
+ipywidgets
+
+evaluate
+langchain
+langchain_openai
+# https://github.com/facebookresearch/faiss/
+# faiss-gpu
+openapi_pydantic
+# serpapi
+# google-search-results
+# serpapi
+
+bitsandbytes
+
+# rouge
+# rouge-score

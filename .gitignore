@@ -1,0 +1,17 @@
+.DS_Store
+
+.idea
+.vscode
+.env
+
+__pycache__
+*.pyc
+
+wandb/
+# gradio
+flagged/
+out/
+log/
+ref/
+data/
+*cache/
