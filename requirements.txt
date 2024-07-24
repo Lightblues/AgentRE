@@ -6,14 +6,11 @@ ipywidgets
 evaluate
 langchain
 langchain_openai
-# https://github.com/facebookresearch/faiss/
-# faiss-gpu
+faiss-gpu
 openapi_pydantic
-# serpapi
-# google-search-results
-# serpapi
+serpapi
+google-search-results
 
 bitsandbytes
-
-# rouge
-# rouge-score
+rouge
+rouge-score
