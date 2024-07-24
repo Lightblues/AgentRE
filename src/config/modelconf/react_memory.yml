@@ -1,0 +1,48 @@
+import: base_config.yml
+model:
+  name: react_memory
+  max_iterations: 5   # maximum iterations for agent
+  max_retry: 5        # for LLM calling
+  use_summary: true   # if use summary! generate CoT results for SLLM
+  num_pre_history: 2  # the number of fixed actions
+  debug: true         # if print debug info
+
+tools:
+  Finish:
+    open: true
+  GetTaskDescription:
+    open: true
+  GetRelationDefinition:
+    open: true
+  # RetrieveExamples:   # changed to -> CorrectMemory
+  #   open: false
+  #   mode: bge
+  #   k: 3
+
+memory:
+  CorrectMemory:
+    open: true
+    mode: bge
+    k: 3
+    num_samples_init: 100
+  ReflexionMemory:
+    open: true
+    mode: bge
+    k: 3
+
+train:
+  if_train: true
+  if_predict: false
+  if_evaluate: true
+
+data:
+  type: re
+  name: SciERC
+  num_samples: 100
+
+llm:
+  model_name: gpt-4-turbo-preview
+  temperature: 0
+  max_tokens: 4096
+
+  use_cache: false    # for random

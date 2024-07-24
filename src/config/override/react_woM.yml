@@ -1,0 +1,40 @@
+model:
+  name: react_memory
+  max_iterations: 5
+  max_retry: 5
+
+tools:
+  Finish:
+    open: true
+  GetTaskDescription:
+    open: true
+  GetRelationDefinition:
+    open: true
+
+memory:
+  CorrectMemory:
+    open: false
+    mode: bge
+    k: 3
+    num_samples_init: 100
+  ReflexionMemory:
+    open: false
+    mode: bge
+    k: 3
+
+train:
+  if_train: true
+  if_predict: false
+  if_evaluate: true
+
+data:
+  type: re
+  name: SciERC
+  num_samples: 100
+
+llm:
+  model_name: gpt-4-turbo-preview
+  temperature: 0
+  max_tokens: 4096
+
+  use_cache: false    # for random

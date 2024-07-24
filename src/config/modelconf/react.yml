@@ -1,0 +1,43 @@
+import: base_config.yml
+model:
+  name: react
+
+tools:
+  SamplesRetrieval:
+    # mode: bge
+    open: false
+  UpdateDeepMemory:
+    open: false
+  UpdateReflexionMemory:
+    open: false
+  SearchDeepMemory:
+    open: false
+  SearchReflexionMemory:
+    open: false
+  SearchGoogle:
+    open: false
+  
+  Finish:
+    open: true
+  GetTaskDescription:
+    open: true
+  GetRelationDefinition:
+    open: true
+
+
+train:
+  if_predict: false
+  if_evaluate: true
+
+data:
+  type: re
+  name: DuIE2.0
+  # num_samples: 5
+
+llm:
+  model_name: gpt-4-turbo-preview
+  temperature: 0
+  max_tokens: 4096
+
+  # use_cache: true
+  use_cache: false    # for random

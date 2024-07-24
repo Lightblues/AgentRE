@@ -1,0 +1,35 @@
+import: base_config.yml
+model:
+  name: react_fsl
+  max_iterations: 5
+  max_retry: 5
+
+tools:
+  Finish:
+    open: true
+  GetTaskDescription:
+    open: true
+  GetRelationDefinition:
+    open: true
+  RetrieveExamples:
+    open: true
+    mode: simcse    # simcse, bge, dummy
+    k: 3
+
+train:
+  if_train: false
+  if_predict: true
+  if_evaluate: true
+
+data:
+  type: re
+  name: DuIE2.0
+  num_samples: 100
+
+llm:
+  model_name: gpt-4-turbo-preview
+  temperature: 0
+  max_tokens: 4096
+
+  # use_cache: true
+  use_cache: false    # for random

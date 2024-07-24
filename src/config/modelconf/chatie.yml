@@ -1,0 +1,18 @@
+import: base_config.yml
+model:
+  name: chatie
+
+train:
+  if_train: false
+  if_predict: true
+  if_evaluate: true
+
+data:
+  type: re
+  name: DuIE2.0
+
+llm:
+  model_name: gpt-4-turbo-preview
+  temperature: 0
+  max_tokens: 4096
+  use_cache: true
